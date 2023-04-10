@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Tamil:wght@100;200;300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Anek Tamil', sans-serif;
+}
+
+.flex-h{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-v{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body{
+    background: #F5F6F6;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 120px;
+}
+
+h1{
+    opacity: 60%;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+p{
+    opacity: 87%;
+}
+
+main>p{
+    font-size: 1.3rem;
+}
+
+.type-container{
+    width: 200px;
+    justify-content: space-between;
+    margin-bottom: 55px;
+}
+
+.type-container p {
+    width: 55px;
+}
+
+input{
+    -webkit-appearance: none;
+    position: relative;
+    width: 55px;
+    height: 30px;
+    border-radius: 25px;
+    background-color: #ccc;
+    transition: background-color .3s;
+    outline: none;
+    cursor: pointer;
+}
+
+input::after{
+    content:"";
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    height: 1.25rem;
+    width: 1.25rem;
+    background-color: #FDFDFD;
+    box-shadow: #aeaeae 0 0 15px;
+    transition: left .3s;
+}
+
+input:checked{
+    background-color: #F7DF1E;
+}
+
+input:checked::after {
+    left: 70%;
+}
+
+.card-container{
+    width: 795px;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.card{
+    position: relative;
+    cursor: pointer;
+    width: 250px;
+    height: 400px;
+    padding: 15px;
+    color: rgba(0,0,0,0.6);
+    background: white;
+    border-radius: 10px;
+    transition: transform .3s;
+    box-shadow: #bbb 0 0 25px;
+}
+
+.card:not(.chosen):hover{
+    transform: translateY(-10px);
+}
+
+.chosen:hover{
+    transform: translateY(-10px) scale(1.1);
+}
+
+.chosen{
+    color: rgba(0,0,0,0.87);
+    background-color: #F7DF1E;
+    transform: scale(1.1);
+    z-index: 100;
+}
+
+.star-img{
+    display: block;
+    top:-30px;
+    left:-30px;
+    position: absolute;
+    transform: rotate(-30deg);
+    max-width: 110px;
+    opacity: .7;
+}
+
+.chosen>img{
+    opacity: 1;
+}
+
+h2{
+    font-size: 3rem;
+}
